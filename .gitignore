@@ -1,5 +1,7 @@
 source/
+__pycache__/
 materials/
 .folder/
+*.bak
 +/
 tempCodeRunnerFile.py
