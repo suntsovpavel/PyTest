@@ -12,11 +12,11 @@ def filling_one_person(person):
 # полностью перезаписывам файл из списка словарей {'name','second_name','surname','phone'}
 def filling_all(list_dict):    
     with open(name_dict, 'w', encoding='utf-8')  as f:
-        for one_dict in list_dict:
-            f.write(one_dict['surname'] + '\n')
-            f.write(one_dict['name'] + '\n')
-            f.write(one_dict['second_name'] + '\n')
-            f.write(one_dict['phone']  + '\n')
+        for el in list_dict:
+            f.write(el['surname'] + '\n')
+            f.write(el['name'] + '\n')
+            f.write(el['second_name'] + '\n')
+            f.write(el['phone']  + '\n')
             f.write('\n')    
 
 # Считываем содержимое справочника в список словарей {'name','second_name','surname','phone'} и возвращаем его

@@ -2,7 +2,7 @@
 def choose_mode():
     mode = input('Введите режим работы: запись, поиск, изменение, удаление: ')
     person = {}
-    keyword = ''
+    keyword = ''  # слово поиска (имя или фамилия)
     if mode == 'запись':
         person = fill_person()
     elif mode == 'поиск' or mode == 'изменение' or mode == 'удаление':
@@ -12,10 +12,10 @@ def choose_mode():
         choose_mode()
     return person, mode, keyword
 
-
 def fill_person():
-    surname = input('Введите фамилию: ')
-    name = input('Введите имя: ')
-    second_name = input('Введите отчество: ')
-    phone = input('Введите телефон: ')
-    return {'surname': surname, 'name': name, 'second_name': second_name, 'phone': phone}
+    dict_user = {}
+    dict_user['surname'] = input('Введите фамилию: ')
+    dict_user['name'] = input('Введите имя: ')
+    dict_user['second_name'] = input('Введите отчество: ')
+    dict_user['phone'] = input('Введите телефон: ')
+    return dict_user
